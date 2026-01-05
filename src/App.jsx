@@ -10,7 +10,7 @@ function App() {
         
     {}
     <img 
-      src="{profileImg}" 
+      src={profileImg}
       alt="Alexandru Tutu" 
       className="profile-pic" 
     />
