@@ -9,7 +9,7 @@ function App() {
         
     {}
     <img 
-      src="public/Poza_Profil.jpeg" 
+      src="Poza_Profil.jpeg" 
       alt="Alexandru Tutu" 
       className="profile-pic" 
     />
