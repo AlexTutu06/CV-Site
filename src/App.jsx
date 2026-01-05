@@ -61,7 +61,7 @@ function App() {
 
         <section id="experience">
           <div className="card">
-            <div className="date">2023 — PRES</div>
+            <div className="date">2025 — PRES</div>
             <div className="content">
               <h3>Back-End Developer Volunteer · SISC</h3>
               <p style={{color: 'var(--text-secondary)', fontSize: '0.9rem'}}>
@@ -80,7 +80,7 @@ function App() {
 
         <section id="education">
           <div className="card">
-            <div className="date">2023 — 2027</div>
+            <div className="date">2024 — 2027</div>
             <div className="content">
               <h3>B.Sc. in Computer Science</h3>
               <h4 style={{color: 'var(--text-secondary)', fontWeight: '400'}}>Bucharest University of Economic Studies (ASE) </h4>
