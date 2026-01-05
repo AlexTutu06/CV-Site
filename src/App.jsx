@@ -7,9 +7,9 @@ function App() {
       {/* LEFT SIDE */}
       <aside className="left-column">
         
-    {/* Poza de profil */}
+    {}
     <img 
-      src="/Poza_Profil.jpeg" 
+      src="public/Poza_Profil.jpeg" 
       alt="Alexandru Tutu" 
       className="profile-pic" 
     />

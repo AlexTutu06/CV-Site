@@ -59,17 +59,15 @@
   background: rgba(94, 234, 212, 0.1);
 }
 
-/* Right Column */
 .right-column {
   width: 55%;
   padding: 80px 0;
 }
 
 .section-title {
-  display: none; /* Only visible on mobile in Brittany's style */
+  display: none; 
 }
 
-/* Cards (Experience & Education) */
 .card {
   display: flex;
   gap: 20px;
@@ -106,7 +104,6 @@
   font-size: 0.7rem;
 }
 
-/* Skills Grid */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
@@ -122,7 +119,6 @@
   border-radius: 6px;
 }
 
-/* Mobile responsive */
 @media (max-width: 768px) {
   .container { flex-direction: column; padding: 0 20px; }
   .left-column { width: 100%; height: auto; position: relative; padding: 40px 0; }
@@ -136,23 +132,23 @@
 }
 
 .social-icon {
-  color: var(--text-secondary); /* Culoarea gri de bază */
-  font-size: 1.5rem; /* Mărimea iconiței */
+  color: var(--text-secondary); 
+  font-size: 1.5rem; 
   transition: all 0.3s ease;
 }
 
 .social-icon:hover {
-  color: var(--accent); /* Devine turcoaz la hover */
-  transform: translateY(-3px); /* Se ridică puțin la hover */
+  color: var(--accent); 
+  transform: translateY(-3px); 
 }
 .profile-pic {
-  width: 180px;          /* Poți mări sau micșora aici */
+  width: 180px;          
   height: 180px;
-  border-radius: 50%;    /* Aceasta face poza cerc */
-  object-fit: cover;     /* Previne deformarea imaginii dacă nu e pătrată */
-  border: 2px solid var(--accent); /* Un contur subțire turcoaz (opțional) */
-  margin-bottom: 15px;   /* Spațiu între poză și nume */
-  display: block;        /* Asigură alinierea corectă */
-  display: block;       /* Face imaginea să se comporte ca un bloc */
-  margin-left: 70px    /* Împinge din stânga spre centru */
+  border-radius: 50%;    
+  object-fit: cover;     
+  border: 2px solid var(--accent); 
+  margin-bottom: 15px;  
+  display: block;        
+  display: block;      
+  margin-left: 70px    
 }
