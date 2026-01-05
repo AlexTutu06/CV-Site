@@ -1,6 +1,7 @@
 import './App.css';
 import { SiCplusplus, SiLinux, SiNodedotjs, SiPostgresql, SiJavascript, SiReact, SiHtml5 } from 'react-icons/si';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import profileImg from './assets/Poza_Profil.jpeg'
 function App() {
   return (
     <div className="container">
@@ -9,7 +10,7 @@ function App() {
         
     {}
     <img 
-      src="Poza_Profil.jpeg" 
+      src="{ProfileImg}" 
       alt="Alexandru Tutu" 
       className="profile-pic" 
     />
