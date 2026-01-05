@@ -1,0 +1,24 @@
+:root {
+  --bg-color: #0f172a;
+  --text-main: #e2e8f0;
+  --text-secondary: #94a3b8;
+  --accent: #5eead4;
+  --font-family: 'Inter', system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: var(--font-family);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+section {
+  margin-bottom: 100px;
+}
