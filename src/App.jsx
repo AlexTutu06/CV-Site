@@ -1,108 +1,94 @@
 import './App.css';
-import { SiCplusplus, SiLinux, SiNodedotjs, SiPostgresql, SiJavascript, SiReact, SiHtml5 } from 'react-icons/si';
+import { About, ProfileHeader, Experience, Skills, Education, Sidebar, Projects } from './components';
+import pozaMea from './assets/Poza_Profil.jpeg';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
-import profileImg from './assets/Poza_Profil.jpeg'
+import { SiCplusplus, SiLinux, SiNodedotjs, SiPostgresql, SiJavascript, SiHtml5, SiReact } from 'react-icons/si';
+
 function App() {
+  const myEducation = [
+    {
+      period: "2024 — PRESENT",
+      title: "Bachelor's degree",
+      institution: "Faculty of Economic Cybernetics, Statistics and CS, ASE Bucharest",
+      description: "Focused on building a strong foundation in software development, algorithms, database management and economics."
+    }
+  ];
+    const myExperience = [
+    {
+      period: "2025 — PRESENT",
+      title: "Backend Developer (Volunteer)",
+      company: "SISC (Sindicatul Studenților din Cibernetică)",
+      description: "Designed and managed relational databases within a Laragon environment, ensuring efficient data storage and retrieval, utilizing Yaak for rigorous API testing.",
+      tags: ["Git", "JavaScript", "Node.js"]
+    }
+  ];
+  const myProjects = [
+    {
+      period: "2025",
+      title: "Node Data EntryApp",
+      description: "Developed a RESTful API from scratch using native Node.js modules, managing HTTP requests and responses without external frameworks.",
+      tags: ["JavaScript", "Node"]
+    },
+    {
+      period: "2026",
+      title: "Personal Portfolio Website",
+      description: "Developed a responsive, modern web application using React, implementing a sticky side-navigation and asymetrical layout.",
+      tags: ["React", "Vite", "CSS", "HTML"]
+    },
+    {
+      period: "2025",
+      title: "Linux User Management CLI (Bash)",
+      description: "Co-developed a CLI-based User Management system featuring secure registration, authentication (login/logout), and active session tracking.",
+      link : "https://github.com/AlexTutu06/Bash-User-Management-System",
+      tags: ["Bash(Linux)"]
+    }
+
+  ];
+  const sidebarData = {
+  profile: {
+    img: pozaMea,
+    name: "Tuțu Alexandru",
+    role: "Aspiring Back-End Developer",
+    description: "I enjoy working on back-end systems and I'm currently expanding my full-stack knowledge with React."
+  },
+  navigation: [
+    { tinta: "#about", eticheta: "ABOUT" },
+    { tinta: "#experience", eticheta: "EXPERIENCE" },
+    { tinta: "#education", eticheta: "EDUCATION" },
+    { tinta: "#projects", eticheta: "PROJECTS" },
+    { tinta: "#skills", eticheta: "SKILLS" }
+  ],
+  socials: [
+    { url: "https://github.com/AlexTutu06", iconita: FaGithub },
+    { url: "https://www.linkedin.com/in/alexandrututu8782702aa/", iconita: FaLinkedin }
+  ]
+};
+const mySkills = [
+  { name: "C/C++", icon: <SiCplusplus />, color: "#00599C" },
+  { name: "Linux/Bash", icon: <SiLinux />, color: "#FCC624" },
+  { name: "Node.js", icon: <SiNodedotjs />, color: "#339933" },
+  { name: "SQL", icon: <SiPostgresql />, color: "#4169E1" },
+  { name: "JavaScript", icon: <SiJavascript />, color: "#F7DF1E" },
+  { name: "HTML", icon: <SiHtml5 />, color: "#E34F26" },
+  { name: "React", icon: <SiReact/>, color: "#61dafb"},
+];
+const description = `I am a Computer Science student focused on creating efficient back-end architectures. My experience in volunteer work allowed me to work with Node.js and Git, while my academic background gave me a solid understanding of C++, SQL and Linux systems.`
   return (
     <div className="container">
-      {/* LEFT SIDE */}
-      <aside className="left-column">
-        
-    {}
-    <img 
-      src={profileImg}
-      alt="Alexandru Tutu" 
-      className="profile-pic" 
-    />
-        <div>
-          <h1 style={{fontSize: '3rem', margin: 0}}>Tuțu Alexandru</h1>
-          <h2 style={{color: 'var(--text-main)', fontSize: '1.2rem'}}>Aspiring Back-End Developer</h2>
-          <p className="description">
-            I enjoy working on back-end systems and I'm currently expanding my full-stack knowledge.
-          </p>
-          
-          <nav className="nav-menu">
-            <a href="#about" className="nav-link">ABOUT</a>
-            <a href="#experience" className="nav-link">EXPERIENCE</a>
-            <a href="#education" className="nav-link">EDUCATION</a>
-            <a href="#skills" className="nav-link">SKILLS</a>
-          </nav>
-        </div>
-        <div className="social-links">
-  <a 
-    href="https://github.com/AlexTutu06" 
-    target="_blank" 
-    rel="noreferrer" 
-    className="social-icon"
-  >
-    <FaGithub />
-  </a>
-  <a 
-    href="https://www.linkedin.com/in/alexandru-tu%C8%9Bu-8782702aa/" 
-    target="_blank" 
-    rel="noreferrer" 
-    className="social-icon"
-  >
-    <FaLinkedin />
-  </a>
-</div>
-      </aside>
+      <Sidebar items={sidebarData} />
 
-      {/* RIGHT SIDE */}
       <main className="right-column">
         
-        <section id="about">
-          <p style={{color: 'var(--text-secondary)'}}>
-            I am a Computer Science student focused on creating efficient back-end architectures. 
-            My experience in volunteer work allowed me to work with Node.js and Git, 
-            while my academic background gave me a solid understanding of C++, SQL and Linux systems.
-          </p>
-        </section>
+        <section><About text= {description}/></section>
+        <section><Experience items ={myExperience}/></section>
+        <section><Education items={myEducation}/></section>
+        <section><Projects items={myProjects} /></section>
+        <section><Skills items={mySkills} /></section>
+        
+            
 
-        <section id="experience">
-          <div className="card">
-            <div className="date">2025 — PRES</div>
-            <div className="content">
-              <h3>Back-End Developer Volunteer · SISC</h3>
-              <p style={{color: 'var(--text-secondary)', fontSize: '0.9rem'}}>
-                Designed and maintained REST APIs. Managed relational databases within a Laragon environment,
-                 ensuring efficient data storage and retrieval, utilizing Yaak for rigorous API testing. 
-              </p>
-              <div className="tags">
-                <span className="tag">Node.js</span>
-                <span className="tag">CSS</span>
-                <span className="tag">JavaScript</span>
-                <span className="tag">HTML</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="education">
-          <div className="card">
-            <div className="date">2024 — 2027</div>
-            <div className="content">
-              <h3>B.Sc. in Computer Science</h3>
-              <h4 style={{color: 'var(--text-secondary)', fontWeight: '400'}}>Bucharest University of Economic Studies (ASE) </h4>
-              <h5 style={{color: 'var(--text-secondary)', fontWeight: '400'}}>Specialization: Economic Informatics </h5>
-              <p style={{fontSize: '0.85rem'}}>Key courses: Algorithms, OOP (C++), Operating Systems, Databases.</p>
-            </div>
-          </div>
-        </section>
-
-        <section id="skills">
-          <div className="skills-grid">
-            <div className="skill-item"><SiCplusplus color="#00599C"/> <span>C/C++</span></div>
-            <div className="skill-item"><SiLinux color="#FCC624"/> <span>Linux/Bash</span></div>
-            <div className="skill-item"><SiNodedotjs color="#339933"/> <span>Node.js</span></div>
-            <div className="skill-item"><SiPostgresql color="#4169E1"/> <span>SQL</span></div>
-            <div className="skill-item"><SiJavascript color="#F7DF1E"/> <span>JavaScript</span></div>
-            <div className="skill-item"><SiHtml5 color="#cb7616ff"/> <span>HTML</span></div>
-          </div>
-        </section>
-
-      </main>
-    </div>
+      </main> 
+    </div> 
   );
 }
 
