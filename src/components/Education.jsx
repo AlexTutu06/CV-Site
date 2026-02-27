@@ -2,7 +2,7 @@ import React from 'react';
 
 const Education = ({ items }) => {
   return (
-    <section id="education" style={{ marginTop: '20px' }}>
+    <section id="education" style={{ marginTop: '40px' }}>
       <h2 className="section-title">Education</h2>
       {items.map((items, index) => (
         <div className="card" key={index}>
